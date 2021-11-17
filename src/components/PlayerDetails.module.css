@@ -81,3 +81,9 @@
 .title h4, .artist h4 {
     font-weight: 200;
 }
+
+@media (min-width: 1150px) {
+   .image img {
+       width: 45%;
+   }
+}
