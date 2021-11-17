@@ -1,0 +1,83 @@
+.details {
+    margin: 10px 30px;
+    display: flex;
+    flex-direction: column;
+    height: 40%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.songMedia {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0px 4px 7px 1px rgba(0,0,0,0.36);
+}
+
+.songTime {
+    width: 100%;
+    padding: 5px;
+    background-color: #6B5346;
+    color: rgb(224, 208, 202);
+    font-size: 1.1rem;
+    font-weight: 300 !important;
+}
+
+.image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 45vh;
+    padding: 10px;
+    background-color: #6B5346;
+    
+    
+}
+
+.image img {
+    width: 70%;
+    border-radius: 15px;
+    box-shadow: 0px 4px 7px 1px rgba(0,0,0,0.36);
+}
+
+.songInfo {
+    background-color: #6B5346;
+    width: 90%;
+    min-height: 100%;
+    padding: 7px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0px 4px 7px 1px rgba(0,0,0,0.36);
+}
+
+.title, .artist {
+    width: 100%;
+    padding: 10px 5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* border: 1px solid black; */
+    background-color: #42342B;
+    color: rgb(224, 208, 202);
+}
+
+.title {
+    border-radius: 10px 10px 0 0;
+    border-bottom: 1px solid #6B5346;
+}
+
+.artist {
+    border-radius: 0 0 10px 10px;
+}
+
+.title h3, .artist h3 {
+    width: 90%;
+    font-weight: 300;
+}
+
+.title h4, .artist h4 {
+    font-weight: 200;
+}

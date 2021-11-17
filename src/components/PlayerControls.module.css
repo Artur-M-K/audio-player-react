@@ -1,0 +1,36 @@
+.controls {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px 0;
+}
+
+.play {
+    display: flex;
+    margin: 0 30px;
+    padding: 20px;
+    border-radius: 50%;
+    border: none;
+    background-color: #42342B;
+    color: rgb(224, 208, 202);
+    font-size: 1.5rem;
+    cursor: pointer;
+    
+}
+
+.skip {
+    display: flex;
+    margin: 0 10px;
+    padding: 15px;
+    border-radius: 50%;
+    border: none;
+    background-color: #42342B;
+    color: rgb(224, 208, 202);
+    font-size: 1.3rem;
+    cursor: pointer;
+}
+
+.play:hover, .skip:hover {
+    color: white;
+    background-color: #362b24;
+}

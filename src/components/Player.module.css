@@ -1,0 +1,13 @@
+.player {
+    width: 50vw;
+    margin: 5% auto;
+    background-color: #AB866F;
+    border-radius: 10px;
+    box-shadow: 0px 4px 7px 1px rgba(0,0,0,0.36);
+}
+
+.player h4, .player p {
+    text-align: center;
+    padding: 5px 0;
+    font-weight: 300;
+}
