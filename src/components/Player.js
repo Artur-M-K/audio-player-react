@@ -7,14 +7,23 @@ const Player = ({songs, nextSongIndex, currentSongIndex, setCurrentSongIndex}) =
     const audioElement = useRef(null);
     const [isPlaying, setIsPlaying] = useState(false);
     const [duration, setDuration] = useState(0);
+    const [songTime, setSongTime] = useState('0:00');
 
     useEffect(() => {
+        let currentTime;
         if(isPlaying) {
             audioElement.current.play();
+            currentTime = setInterval(() => {
+                const songCurrentTime = convertTime(audioElement.current.currentTime);
+                setSongTime(songCurrentTime);
+            }, 1000);
         }else {
             audioElement.current.pause();
+            // clearInterval(currentTime)
         }
         setDuration(audioElement.current.duration);
+    
+        return () => clearInterval(currentTime);
     }, [isPlaying]);
 
     const skipSong = (forwards = true) => {
@@ -59,8 +68,9 @@ const Player = ({songs, nextSongIndex, currentSongIndex, setCurrentSongIndex}) =
     return mins + ':' + secs;
 }
 
-    duration && console.log(convertTime(duration))
-  
+    duration && console.log(convertTime(duration));
+    console.log(songTime);
+
     return (
         <div className={styles.player}>
             <audio src={songs[currentSongIndex].src} ref={audioElement}></audio>

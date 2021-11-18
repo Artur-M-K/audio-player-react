@@ -12,7 +12,7 @@
     font-weight: 300;
 }
 
-@media (max-width: 420px) {
+@media screen and (max-width: 420px) and (orientation: portrait) {
     .player {
         width: 98vw;
     }
