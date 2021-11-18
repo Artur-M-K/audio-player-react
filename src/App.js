@@ -2,8 +2,7 @@ import React, {useState, useEffect} from 'react';
 import Player from './components/Player';
 import './App.css';
 
-
-window.screen.orientation.lock('portrait');
+// window.screen.orientation.lock('portrait');
 const DUMMY_DATA = [
 {
   title: "The Kraken",

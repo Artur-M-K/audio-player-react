@@ -6,28 +6,19 @@ const Player = ({songs, nextSongIndex, currentSongIndex, setCurrentSongIndex}) =
 
     const audioElement = useRef(null);
     const [isPlaying, setIsPlaying] = useState(false);
-    const [duration, setDuration] = useState(0);
-    const [songTime, setSongTime] = useState('0:00');
+    const [duration, setDuration] = useState(null);
 
     useEffect(() => {
-        let currentTime;
+
         if(isPlaying) {
             audioElement.current.play();
-            currentTime = setInterval(() => {
-                const songCurrentTime = convertTime(audioElement.current.currentTime);
-                setSongTime(songCurrentTime);
-            }, 1000);
         }else {
             audioElement.current.pause();
-            // clearInterval(currentTime)
         }
-        setDuration(audioElement.current.duration);
-    
-        return () => clearInterval(currentTime);
     }, [isPlaying]);
 
     const skipSong = (forwards = true) => {
-
+        audioElement.current.currentTime = 0;
         //skip song forward
         if (forwards) {
             setCurrentSongIndex(() => {
@@ -51,29 +42,24 @@ const Player = ({songs, nextSongIndex, currentSongIndex, setCurrentSongIndex}) =
                 return temp;
             })
         }
+        setDuration(audioElement.current.duration);
         setIsPlaying(false);
     };
 
-    const convertTime = (time) =>
-{    
-    let mins = Math.floor(time / 60);
-    if (mins < 10) {
-      mins = '0' + String(mins);
+    // setTimeout(() => {
+    //     audioElement ? setDuration(audioElement.current.duration) : '00:00' ;
+    // }, 300);
+//    audioElement.current ? setDuration(audioElement.current.duration) : setDuration('00:00');
+// console.log(audioElement.current);
+
+const onLoadedMetadata = () => {
+    if (audioElement.current) {
+        setDuration(audioElement.current.duration);
     }
-    let secs = Math.floor(time % 60);
-    if (secs < 10) {
-      secs = '0' + String(secs);
-    }
-
-    return mins + ':' + secs;
-}
-
-    duration && console.log(convertTime(duration));
-    console.log(songTime);
-
+};
     return (
         <div className={styles.player}>
-            <audio src={songs[currentSongIndex].src} ref={audioElement}></audio>
+            <audio src={songs[currentSongIndex].src} ref={audioElement} onLoadedMetadata={onLoadedMetadata}></audio>
             <h4>Player</h4>
             <PlayerDetails 
                 song={songs[currentSongIndex]} 
@@ -81,7 +67,8 @@ const Player = ({songs, nextSongIndex, currentSongIndex, setCurrentSongIndex}) =
                 setIsPlaying={setIsPlaying}
                 skipSong={skipSong}
                 songs={songs}
-                duration={duration ? convertTime(duration): '00:00'}
+                audioElement={audioElement.current}
+                duration={duration}
             />
             <p><strong>Next up:</strong> {songs[nextSongIndex].title} - {songs[nextSongIndex].artist}</p>
         </div>
