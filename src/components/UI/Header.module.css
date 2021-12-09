@@ -1,0 +1,40 @@
+.header {
+    width: 100%;
+    height: 50px;
+    margin-top: 10px;
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    list-style: none;
+}
+
+.menu :first-child {
+    flex: 1;
+}
+
+.menu li {
+    padding: .8rem 1rem;
+    font-size: 1.5rem;
+    font-weight: 200;
+    
+}
+
+.menu li:hover {
+    color: var(--clr-primary-slight);
+}
+
+a {
+    text-decoration: none;
+    color: var(--clr-main-light);
+}
+
+hr {
+    margin-top: 10px;
+    border: 0;
+    height: 1px;
+    background: var(--clr-background-light);
+    background-image: linear-gradient(to right, var(--clr-background-light), var(--clr-primary-slight), var(--clr-background-light));
+}

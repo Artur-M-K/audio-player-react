@@ -1,11 +1,11 @@
 import React, {useState, useEffect} from "react";
 import PlayerControls from "./PlayerControls";
 import {Slider} from '@material-ui/core';
-import  {createMuiTheme}  from '@material-ui/core/styles';
+import  {createTheme}  from '@material-ui/core/styles';
 import { ThemeProvider } from '@material-ui/styles';
 import styles from "./PlayerDetails.module.css";
 
-const muiTheme = createMuiTheme({
+const muiTheme = createTheme({
   overrides:{
     MuiSlider: {
       root:{
