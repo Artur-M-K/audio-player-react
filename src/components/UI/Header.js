@@ -9,6 +9,7 @@ const Header = () => {
                 <Link to="/mylist">
                 <li>My List</li>
                 </Link>
+                <li></li>
                 <li>Login</li>
                 <li>Register</li>
             </ul>

@@ -4,3 +4,10 @@
     flex-basis: 90%;
     background-color: rgb(241, 241, 201);
 }
+
+@media (max-width: 640px) {
+    .container {
+        flex-basis: 70%;
+    }
+    
+}

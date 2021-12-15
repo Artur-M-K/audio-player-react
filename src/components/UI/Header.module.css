@@ -11,7 +11,7 @@
     list-style: none;
 }
 
-.menu :first-child {
+.menu :nth-child(2) {
     flex: 1;
 }
 
@@ -37,4 +37,10 @@ hr {
     height: 1px;
     background: var(--clr-background-light);
     background-image: linear-gradient(to right, var(--clr-background-light), var(--clr-primary-slight), var(--clr-background-light));
+}
+
+@media (max-width: 640px) {
+    .menu :nth-child(2) {
+        padding: 0;
+    }
 }
