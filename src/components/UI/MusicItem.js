@@ -1,14 +1,21 @@
-import React from 'react'
+
+import React from 'react';
+import styles from './MusicItem.module.css';
 
 const MusicItem = ({artist, title, image, source}) => {
     
     return (
-        <li >
-            <div>
-                <p>{artist}</p>
-                <span>{title}</span>
+        <li className={styles.container}>
+            <img src={image} alt="" className={styles.image}/>
+            <div className={styles.songInfo}>
+                <p className={styles.artist}>{artist}</p>
+                <p className={styles.title}>{title}</p> 
             </div>
-            <img src={image} alt="" />
+            <div className={styles.social}>
+                <button>likes: 100</button>
+                <button>views: 345345</button>
+            </div>
+            
         </li>
     )
 }

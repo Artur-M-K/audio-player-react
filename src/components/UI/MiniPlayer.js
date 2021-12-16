@@ -1,10 +1,13 @@
 import React, {useState} from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
 import {
   faPlay,
   faPause,
   faVolumeDown,
   faVolumeUp,
+  faPlusSquare,
+  faMinusSquare
 } from "@fortawesome/free-solid-svg-icons";
 import { Slider } from "@material-ui/core";
 import { createTheme } from "@material-ui/core/styles";
@@ -57,12 +60,13 @@ const MiniPlayer = () => {
         <p>SONG NAME</p>
         <p>ARTIST NAME</p>
         </div>
-        <p>TIME 00:00</p>
+        <button className={styles.add}><FontAwesomeIcon icon={faPlusSquare} /></button>
       </div>
       <div className={styles.mini_controls}>
         <button className={styles.mini_play}>
           <FontAwesomeIcon icon={!isPlay? faPlay: faPause} onClick={playHandler}/>
         </button>
+        <p>TIME 00:00</p>
       </div>
       <div className={styles.mini_bars}>
         <div className={styles.timeBar}>

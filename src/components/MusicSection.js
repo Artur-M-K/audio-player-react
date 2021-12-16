@@ -5,7 +5,7 @@ import styles from './MusicSection.module.css';
 const MusicSection = ({data}) => {
     return (
         <div className={styles.container}>
-            <ul>
+            <ul className={styles.songs}>
                 {data.map(item => {
                     return (
                         <MusicItem 

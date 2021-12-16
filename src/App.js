@@ -36,6 +36,62 @@ const DUMMY_DATA = [
     src: "./music/Ketsa - Sabre.mp3",
     id: "4"
   },
+  {
+    title: "The Kraken",
+    artist: "amityinfame",
+    img_src: "./images/amityinfame - The Kraken.jpg",
+    src: "./music/amityinfame - The Kraken.mp3",
+    id: "1"
+  },
+  {
+    title: "Everything I'm not",
+    artist: "From Tom",
+    img_src: "./images/From Tom - Everything I'm not.jpg",
+    src: "./music/From Tom - Everything I'm not.mp3",
+    id: "2"
+  },
+  {
+    title: "Folding Space Dub",
+    artist: "kalikreekdubb",
+    img_src: "./images/kalikreekdubb - Folding Space Dub.jpg",
+    src: "./music/kalikreekdubb - Folding Space Dub.mp3",
+    id: "3"
+  },
+  {
+    title: "Sabre",
+    artist: "Ketsa",
+    img_src: "./images/Ketsa - Sabre.jpg",
+    src: "./music/Ketsa - Sabre.mp3",
+    id: "4"
+  },
+  {
+    title: "The Kraken",
+    artist: "amityinfame",
+    img_src: "./images/amityinfame - The Kraken.jpg",
+    src: "./music/amityinfame - The Kraken.mp3",
+    id: "1"
+  },
+  {
+    title: "Everything I'm not",
+    artist: "From Tom",
+    img_src: "./images/From Tom - Everything I'm not.jpg",
+    src: "./music/From Tom - Everything I'm not.mp3",
+    id: "2"
+  },
+  {
+    title: "Folding Space Dub",
+    artist: "kalikreekdubb",
+    img_src: "./images/kalikreekdubb - Folding Space Dub.jpg",
+    src: "./music/kalikreekdubb - Folding Space Dub.mp3",
+    id: "3"
+  },
+  {
+    title: "Sabre",
+    artist: "Ketsa",
+    img_src: "./images/Ketsa - Sabre.jpg",
+    src: "./music/Ketsa - Sabre.mp3",
+    id: "4"
+  },
   ];
 
 function App() {
