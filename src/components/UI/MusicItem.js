@@ -1,8 +1,9 @@
 import React from 'react'
 
 const MusicItem = ({artist, title, image, source}) => {
+    
     return (
-        <li>
+        <li >
             <div>
                 <p>{artist}</p>
                 <span>{title}</span>

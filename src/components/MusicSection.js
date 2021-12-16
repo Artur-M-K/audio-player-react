@@ -13,6 +13,7 @@ const MusicSection = ({data}) => {
                             artist={item.artist}
                             image={item.img_src}
                             source={item.src}
+                            key={item.id}
                             />
                     )
                 })}

@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faPlay,
@@ -42,6 +42,13 @@ const muiTheme = createTheme({
 
 
 const MiniPlayer = () => {
+
+  const [isPlay, setIsPlay] = useState(false);
+
+  const playHandler = () => {
+    setIsPlay(!isPlay)
+  }
+
   return (
     <div className={styles.container}>
       <div className={styles.mini_songInfo}>
@@ -54,7 +61,7 @@ const MiniPlayer = () => {
       </div>
       <div className={styles.mini_controls}>
         <button className={styles.mini_play}>
-          <FontAwesomeIcon icon={faPlay} />
+          <FontAwesomeIcon icon={!isPlay? faPlay: faPause} onClick={playHandler}/>
         </button>
       </div>
       <div className={styles.mini_bars}>
