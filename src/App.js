@@ -43,7 +43,7 @@ function App() {
         <Switch>
           <Route exact path="/">
             <Header />
-            <MainPage />
+            <MainPage data={DUMMY_DATA}/>
           </Route>
           <Route path="/mylist">
             <PersonalPlayer data={DUMMY_DATA}/>

@@ -3,10 +3,10 @@ import MusicSection from '../components/MusicSection';
 import MiniPlayer from '../components/UI/MiniPlayer';
 import styles from './MainPage.module.css';
 
-const MainPage = () => {
+const MainPage = ({data}) => {
     return (
         <div className={styles.container}>
-            <MusicSection />
+            <MusicSection data={data}/>
             <MiniPlayer/> 
         </div>
     )

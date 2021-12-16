@@ -17,8 +17,7 @@ const muiTheme = createTheme({
       root: {
         margin: "0",
         padding: "0",
-        width: "90%",
-        // height: "50%"
+        width: "100%",
       },
       thumb: {
         color: "#fff",
@@ -46,7 +45,12 @@ const MiniPlayer = () => {
   return (
     <div className={styles.container}>
       <div className={styles.mini_songInfo}>
-        <p>SONG</p>
+        <img src="" alt="song img" />
+        <div className={styles.song_details}>
+        <p>SONG NAME</p>
+        <p>ARTIST NAME</p>
+        </div>
+        <p>TIME 00:00</p>
       </div>
       <div className={styles.mini_controls}>
         <button className={styles.mini_play}>
@@ -55,7 +59,7 @@ const MiniPlayer = () => {
       </div>
       <div className={styles.mini_bars}>
         <div className={styles.timeBar}>
-          <div className={styles.dupa}>
+          <div className={styles.timeBar_slider}>
           <ThemeProvider theme={muiTheme}>
             <Slider
               min={0}
@@ -68,7 +72,9 @@ const MiniPlayer = () => {
           </div>
         </div>
         <div className={styles.volumeBar}>
+        <div className={styles.volumeBar_slider}>
         <FontAwesomeIcon icon={faVolumeDown} />
+        
           <ThemeProvider theme={muiTheme}>
             <Slider
               aria-label="Volume"
@@ -76,7 +82,9 @@ const MiniPlayer = () => {
               onChange={() => console.log("dziala")}
             />
           </ThemeProvider>
+          
           <FontAwesomeIcon icon={faVolumeUp} />
+          </div>
         </div>
       </div>
     </div>
